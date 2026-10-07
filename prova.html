@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+    console.log("=== APARTAT 1 – STRINGS ===")
+
+    let firstName  = "Anass";
+    let lastName  = "Banan";
+
+    let hola = `Benvingut/da, ${firstName} ${lastName}!`;
+    console.log(hola);
+    console.log(`Medida texto -> ${hola.length}`);
+
+    let mensaje = " JavaScript és divertit! ";
+    let nuevoMens = mensaje.trim().replace("divertit", "fantàstic");
+
+    console.log(`Texto original -> ${mensaje}`);
+    console.log(`Texto modificado -> ${nuevoMens.toUpperCase()}`);
+
+
+
+    console.log("=== APARTAT 2 – ARRAYS ===")
+    
+    const fruits = ["Poma", "Plàtan", "Taronja", "Mango"];
+    fruits.push("Kiwi");
+    fruits.unshift("Llimona");
+
+
+    
+    console.log("Despues de añadir ->", fruits);
+    
+    fruits.shift();
+    fruits.pop();
+    console.log("Despues de borrar ->", fruits);
+
+
+    const subArr = fruits.slice(1,3);
+    console.log("Cítrics:", subArr);
+
+
+
+    console.log("Recorrido con for:");
+
+    for (let index = 0; index < fruits.length; index++) {
+        console.log(fruits[index]);
+        
+    }
+
+    console.log("Recorrido con forEach (mayusculas):");
+    fruits.forEach(fruta => {
+        console.log(fruta.toUpperCase());
+    });
+
+
+    console.log("=== APARTAT 3 – MÈTODES AVANÇATS D’ARRAY ===")
+
+    const numbers = [4, 9, 16, 25, 29];
+    console.log("Numeros originales:", numbers); 
+    let mayorEdad = numbers.filter(x => x > 18);
+    console.log("Mayores de 18:", mayorEdad); 
+
+    const doble = numbers.map(num => num*2);
+    console.log("Doblados:", doble);
+    
+    let mayorTrenta = numbers.some(numb => numb>30);
+    console.log(`Hay algun numero > 30? ${mayorTrenta}`);
+
+
+
+    console.log("=== APARTAT 4 – Funcions i Arrow Functions ===")
+
+    const add = (a, b) => a+b;
+    console.log(`Suma 5 + 7 = ${add(5,7)}`);
+
+    const square = (x) => x * x;
+    console.log(`Cuadrado de 8 = ${square(8)}`);
+
+    const randomNumber = () => Math.random();
+    console.log(`Numero aleatorio: ${randomNumber(  )}`);
+
+
+
+    console.log("=== APARTAT 5 – Mini exercici integrador ===")
+
+    const students = ["Anass", "Raul", "Marcos", "Daniel", "Alex"];
+    console.log("Lista de alumnos:", students); 
+    //
+    let classList = students.join(", ");
+    console.log(`Como String: ${classList}`);
+
+   
+    let shortNames = students.filter(nom => nom.length<5);
+    console.log("Nombres cortos:", shortNames);
+
+
+
+
+
+    </script>
+</body>
+</html>
